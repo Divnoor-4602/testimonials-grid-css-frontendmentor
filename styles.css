@@ -1,0 +1,128 @@
+/* Moderate violet: hsl(263, 55%, 52%)
+Very dark grayish blue: hsl(217, 19%, 35%)
+Very dark blackish blue: hsl(219, 29%, 14%)
+White: hsl(0, 0%, 100%) */
+
+/* Light gray: hsl(0, 0%, 81%)
+Light grayish blue: hsl(210, 46%, 95%) */
+
+body {
+  background-color: hsl(0, 0%, 100%);
+  height: 100vh;
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed";
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five";
+}
+
+.testimonial-items {
+  border-radius: 0.875rem;
+  padding: 1.25rem 1.25rem 0.5rem 1.25rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#daniel-clifford {
+  background-color: hsl(263, 55%, 52%);
+}
+
+.quote-background {
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
+
+.quotation-marks {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 28.125rem;
+  right: 0px;
+  bottom: 10.5rem;
+  z-index: -1;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  border: 0.15rem solid hsla(0, 0%, 100%, 50%);
+  height: 1.875rem;
+  width: 1.875rem;
+}
+
+.profile-text {
+  width: 6.25rem;
+}
+
+.name-card {
+  display: flex;
+  gap: 1rem;
+}
+
+.name-text {
+  color: white;
+}
+
+.name-description {
+  color: white;
+  opacity: 50%;
+}
+
+.main-description {
+  font-variation-settings: "wght" 600;
+  font-size: 1.25rem;
+  color: white;
+}
+
+.review-paragraphs {
+  color: white;
+  opacity: 50%;
+  line-height: 1.25rem;
+}
+
+#jonathan {
+  background-color: hsl(217, 19%, 35%);
+  gap: 1.75rem;
+}
+
+#kira {
+  background-color: white;
+}
+
+#jeanette {
+  background-color: white;
+  gap: 1.5rem;
+}
+
+#patrick {
+  background-color: hsl(219, 29%, 14%);
+}
+
+@media (min-width: 900px) {
+  body {
+    display: flex;
+  }
+
+  .testimonial-container {
+    grid-template-areas: "one one two five" "three four four five";
+  }
+
+  .grid-col-span-2 {
+    grid-column: span 2;
+  }
+}
